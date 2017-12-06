@@ -15,12 +15,14 @@
   .field
     = f.label :body
     br
-    = f.text_area :body
+    = f.text_area :body, "v-model" => "body"
   .field
     = f.label :age
     br
-    = f.text_field :age
+    = f.text_field :age, "v-model" => "age"
   .actions
     = f.submit
-  div = "{{title}}"
+  div = "binding title={{title}}"
+  div = "binding body={{body}}"
+  div = "binding age={{age}}"
   br

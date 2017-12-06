@@ -8,11 +8,15 @@ div#app
 
 javascript:
   var app = new Vue({
-    el: '#app',
+    el: "#app",
     data: {
-      title: '',
+      title: "",
+      body: "",
+      age: null,
     },
     mounted: function() {
       this.title = #{raw @article.title.to_json}
+      this.body = #{raw @article.body.to_json}
+      this.age = #{raw @article.age.to_json}
     }
   })
