@@ -9,6 +9,8 @@ table
         | Title
       th
         | Body
+      th
+        | Age
       th[colspan="3"]
   tbody
     - @articles.each do |article|
@@ -17,6 +19,8 @@ table
           = article.title
         td
           = article.body
+        td
+          = article.age
         td
           = link_to 'Show', article
         td
