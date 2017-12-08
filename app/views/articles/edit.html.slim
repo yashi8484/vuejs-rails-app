@@ -1,3 +1,6 @@
+= content_for :script do
+  = render "scripts/articles.js"
+
 h1
   | Editing Article
 div#app
@@ -5,6 +8,7 @@ div#app
   = link_to 'Show', @article
   |  |
   = link_to 'Back', articles_path
+  test-component hoge="hello!"
 
 javascript:
   var app = new Vue({
@@ -13,6 +17,9 @@ javascript:
       title: "",
       body: "",
       year: null,
+    },
+    components: {
+      'test-component': test
     },
     mounted: function() {
       this.title = #{raw @article.title.to_json}

@@ -1,0 +1,17 @@
+script#test-template[type="text/x-template"]
+  div
+    = "this is test component."
+    div.fuga = "{{hoge}}"
+
+javascript:
+  var test = {
+    template: '#test-template',
+    props: [
+      'hoge'
+    ],
+  }
+
+css:
+  .fuga {
+    background-color: #c0c0c0;
+  }
